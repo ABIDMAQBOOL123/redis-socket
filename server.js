@@ -53,6 +53,10 @@ mongoose.connect(mongoUrl, {
   .catch(console.error);
 
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('API server is running!');
+});
+
 app.use('/api', apiRoutes);
 
 setupWebSocketServer(wss);
