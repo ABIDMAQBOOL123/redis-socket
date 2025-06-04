@@ -18,6 +18,7 @@ const redis = createClient({ url: redisUrl });
 const pub = createClient({ url: redisUrl });
 const sub = createClient({ url: redisUrl });
 
+
 (async () => {
   try {
     await redis.connect();
